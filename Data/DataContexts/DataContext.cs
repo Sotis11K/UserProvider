@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.DataContexts;
 
-public class DataContext(DbContextOptions<DataContext> options) : IdentityDbContext(options)
+public class DataContext(DbContextOptions<DataContext> options) : IdentityDbContext<ApplicationUser>(options)
 {
     public DbSet<AddressEntity> Addresses { get; set; }
 }
